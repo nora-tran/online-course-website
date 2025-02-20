@@ -1,0 +1,32 @@
+{
+  "name": "Information Technology",
+  "description": "Our IT courses provide students with the technical knowledge and practical skills needed to excel in the ever-evolving technology sector. Covering areas such as programming, cybersecurity, networking, and cloud computing, these courses prepare students for a wide range of IT careers.",
+  "category": "education",
+  "code": "#ITC2025",
+  "duration": "36 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate III",
+  "assessments": [
+    "Coding projects and debugging exercises",
+    "Online quizzes, including multiple choice and short answer questions",
+    "Practical network configuration and cybersecurity simulations"
+  ],
+  "overview": "<h4>Step into the Future of Technology</h4>\n<p>\nGain in-demand skills in programming, cybersecurity, and cloud computing. This course offers hands-on projects and real-world applications, equipping students with expertise in software development, data security, and IT infrastructure management. Whether you aspire to be a software engineer or a network administrator, this course provides the foundation for a successful IT career.\n</p>",
+  "skills": [
+    "Programming in Python, Java, and C++",
+    "Network security and ethical hacking",
+    "Cloud computing and database management",
+    "Software development and troubleshooting"
+  ],
+  "careers": [
+    "Software Developer",
+    "Cybersecurity Analyst",
+    "IT Support Specialist",
+    "Network Administrator"
+  ],
+  "purposes": [
+    "Upon successful completion of this course, you will receive a nationally recognized qualification, Certificate III in Information Technology.",
+    "Students will gain expertise in programming, networking, and cybersecurity through practical applications and projects.",
+    "Graduates can pursue industry certifications such as CompTIA Security+, AWS Certified Cloud Practitioner, and Cisco CCNA."
+  ]
+}

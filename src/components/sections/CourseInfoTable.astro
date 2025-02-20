@@ -1,0 +1,57 @@
+---
+import CircleInfo from '../../assets/icon/circle-info.svg';
+import HourglassHalf from '../../assets/icon/hourglass-half.svg';
+import User from '../../assets/icon/user.svg';
+import RectangleList from '../../assets/icon/rectangle-list.svg';
+import GraduationCap from '../../assets/icon/graduation-cap.svg';
+
+import type { Course } from '../../utils/courses.ts';
+interface Props {
+  course: Course;
+}
+const { course } = Astro.props;
+---
+
+<table class="table m-0 h-fit w-full bg-secondary p-5 text-base">
+  <tbody>
+    <tr>
+      <td class="flex items-center gap-1">
+        <CircleInfo class="h-5 w-5" />
+        <b>Code</b>
+      </td>
+      <td>{course.code}</td>
+    </tr>
+    <tr>
+      <td class="flex items-center gap-1">
+        <HourglassHalf class="h-5 w-5" />
+        <b>Duration</b>
+      </td>
+      <td>{course.duration}</td>
+    </tr>
+    <tr>
+      <td class="flex items-center gap-1">
+        <User class="h-5 w-5" />
+        <b>Eligibility</b>
+      </td>
+      <td>{course.eligibility}</td>
+    </tr>
+    <tr>
+      <td class="flex items-center gap-1">
+        <GraduationCap class="h-5 w-5" />
+        <b>Qualification</b>
+      </td>
+      <td>{course.qualification}</td>
+    </tr>
+    <tr>
+      <td class="flex items-center gap-1">
+        <RectangleList class="h-5 w-5" />
+        <b>Assessments</b>
+      </td>
+      <td class="pl-2">
+        <ul style="list-style-type: disc;padding-left: 20px;">
+          {course.assessments.map((assessment) => <li>{assessment}</li>)}
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

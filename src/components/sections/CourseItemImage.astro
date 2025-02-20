@@ -1,0 +1,30 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import ImageIcon from "../../assets/icon/image.svg";
+
+interface Props {
+  imagePath?: string;
+  altText: string;
+}
+
+const { imagePath, altText } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/data/courses/**/image.{jpeg,jpg,png,gif}",
+);
+---
+
+{
+  imagePath && images[imagePath] ? (
+    <Image
+      src={images[imagePath]()}
+      alt={altText}
+      class="w-full h-full object-cover"
+    />
+  ) : (
+    <div class="flex flex-col items-center gap-2 text-gray-500">
+      <ImageIcon class="h-20 w-auto" fill="#9ca3af" />
+      <div>{altText}</div>
+    </div>
+  )
+}

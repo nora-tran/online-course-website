@@ -1,0 +1,78 @@
+---
+interface Props {
+  isMobile?: boolean;
+}
+
+import { Routes } from "../utils/navigation";
+
+const { isMobile = false } = Astro.props;
+---
+
+<style>
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    @apply bg-accent;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+  }
+
+  .hover-underline-animation.center::after {
+    transform-origin: bottom center;
+  }
+
+  :not(
+      .navigation__item--active
+    ).hover-underline-animation.center:hover::after
+   {
+    transform-origin: bottom center;
+  }
+
+  .navigation__item--active.hover-underline-animation::after {
+    @apply bg-primary;
+    transform: scaleX(1);
+  }
+
+  .navigation__item--active.navigation__item--mobile {
+      @apply bg-slate-200;
+      @apply font-bold;
+  }
+</style>
+
+{
+  Routes.map((route) => (
+    <a
+      href={route.path}
+      class=`navigation__item hover-underline-animation center py-2 px-4 ${isMobile && "navigation__item--mobile"}`
+    >
+      {route.title}
+    </a>
+  ))
+}
+
+<script>
+  const navLinks = document.querySelectorAll("a.navigation__item");
+  navLinks.forEach((link) => {
+    link.classList.remove("navigation__item--active");
+    const currentPath = window.location.pathname.slice(1);
+    const hrefArray = link.getAttribute("href")?.split("/") ?? "";
+    const thisPath = hrefArray[hrefArray.length - 1];
+
+    if (currentPath === thisPath) {
+      link.classList.add("navigation__item--active");
+    }
+  });
+</script>

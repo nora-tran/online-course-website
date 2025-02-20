@@ -1,0 +1,26 @@
+---
+import PhoneIcon from '../../assets/icon/phone.svg';
+---
+
+<style>
+  @keyframes scaleBounce {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  .attention-button:hover {
+    animation: scaleBounce 1s infinite ease-in-out;
+    @apply text-xl;
+  }
+</style>
+
+<button
+  class="attention-button btn rounded-lg bg-accent px-6 py-3 font-bold uppercase shadow-2xl transition duration-300 hover:border-0 hover:bg-accent"
+>
+  <PhoneIcon class="h-5 w-5" />
+  <span class="hidden text-lg lg:block">Call +61 2 1234 5678!</span>
+</button>

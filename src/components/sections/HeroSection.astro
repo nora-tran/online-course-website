@@ -1,0 +1,36 @@
+---
+import { SCHOOL_NAME } from '../../utils/navigation';
+import Button from '../common/Button.astro';
+import heroBannerImg from '../../assets/images/hero-banner.jpg';
+---
+
+<section id="hero-dashboard" class="flex h-screen flex-col items-center pt-16">
+  <div
+    class="hero h-full"
+    style={`background-image: url(${heroBannerImg.src});`}
+  >
+    <div class="hero-overlay bg-opacity-40"></div>
+    <div class="hero-content bg-black/50 px-5 py-10 text-center text-white">
+      <div class="max-w-xl">
+        <h1
+          class="flex flex-wrap items-center justify-center gap-2 text-5xl font-bold text-white"
+        >
+          <span>Welcome to</span>
+          <span>{SCHOOL_NAME}</span>
+        </h1>
+        <p class="m-4 text-white">
+          Take the First Step Toward Success – Master New Skills with Our
+          Expert-Led Online Programs.
+        </p>
+        <div class="flex items-center justify-center gap-2">
+          <a href="/about">
+            <Button class="btn-primary">Learn more</Button>
+          </a>
+          <a href="#course-overview">
+            <Button class="btn-accent">Explore ours course</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

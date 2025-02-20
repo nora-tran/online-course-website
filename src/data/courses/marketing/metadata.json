@@ -1,0 +1,33 @@
+{
+  "name": "Marketing",
+  "description": "Our marketing courses are designed to provide students with the essential skills and strategies needed to succeed in the dynamic world of marketing. Covering key areas such as digital marketing, branding, consumer behavior, market research, and advertising, this course offers both theoretical insights and practical applications to help students develop successful marketing campaigns.",
+  "category": "Education",
+  "code": "#MKGT2025",
+  "duration": "24 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate II",
+  "assessments": [
+    "Online quizzes, including multiple choice and short answer questions",
+    "Marketing project portfolio, including case studies and campaign analysis",
+    "Video and audio presentations showcasing marketing strategies"
+  ],
+  "overview": "<h4>Unlock the Power of Marketing</h4>\n<p>\nMarketing is at the heart of every successful business. Our marketing course equips students with the latest strategies and tools to navigate the competitive business landscape. From understanding consumer behavior to executing digital marketing campaigns, students will gain real-world skills applicable across various industries. Whether you aim to work for a top agency or launch your own brand, this course will help you make a lasting impact in the marketing field.\n</p>",
+  "skills": [
+    "Digital Marketing: Learn SEO, social media, and email marketing strategies",
+    "Branding & Advertising: Understand how to create strong brand identities",
+    "Market Research & Consumer Behavior: Analyze market trends and customer needs",
+    "Campaign Management: Develop and execute successful marketing campaigns"
+  ],
+  "careers": [
+    "Marketing Coordinator",
+    "Brand Manager",
+    "Digital Marketing Specialist",
+    "Market Research Analyst"
+  ],
+  "purposes": [
+    "Upon successful completion of this course, you will receive a nationally recognized qualification, Certificate II in Marketing, awarded by an accredited institution.",
+    "This course provides the foundational knowledge needed for careers in digital marketing, branding, advertising, and consumer research.",
+    "Students will gain hands-on experience through real-world projects, case studies, and campaign simulations.",
+    "Graduates may continue their studies in advanced marketing degrees or industry certifications such as Google Ads and Meta Blueprint."
+  ]
+}

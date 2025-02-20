@@ -1,0 +1,102 @@
+---
+import Container from '../common/Container.astro';
+import { categories } from '../../utils/course-category';
+import { courses } from '../../utils/courses';
+import Button from '../common/Button.astro';
+import CourseItemImage from './CourseItemImage.astro';
+
+const defaultTab = '#all';
+const options = [
+  { title: 'All Course', id: defaultTab },
+  ...categories.map((c) => ({ title: c.title, id: `#${c.id}` })),
+];
+---
+
+<section id="select-category">
+  <Container>
+    <div
+      role="tablist"
+      class="tabs-boxed tabs mt-5 flex w-full flex-wrap gap-2 bg-slate-100"
+    >
+      {
+        options.map((category) => (
+          <a
+            role="tab"
+            class="tab h-12 px-4 py-2 text-center no-underline hover:bg-accent hover:text-primary"
+            href={category.id}
+          >
+            {category.title}
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+  <Container class="py-10">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        courses.map(
+          ({ imageUrl, name = 'N/A', description = '', id, category }) => (
+            <div
+              class="course-list__item card rounded-none border-primary bg-base-100 shadow-xl"
+              data-category={`#${category}`}
+            >
+              <figure class="m-0 h-48 overflow-hidden bg-gray-200">
+                <CourseItemImage imagePath={imageUrl} altText={name} />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title uppercase">{name}</h2>
+                <p>{description}</p>
+                <div class="card-actions w-full pt-4">
+                  <a href={`/courses/${id}`} class="w-full">
+                    <Button class="btn btn-outline btn-primary w-full">
+                      More details
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )
+        )
+      }
+    </div>
+  </Container>
+</section>
+
+<script define:vars={{ defaultTab }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll("[role='tab']");
+    const coursesEls = document.querySelectorAll('.course-list__item');
+
+    function updateActiveTab() {
+      const hash = (window.location.hash || defaultTab).toLowerCase();
+      tabs.forEach((tab) => {
+        tab.classList.toggle(
+          'tab-active',
+          tab.getAttribute('href').toLowerCase() === hash
+        );
+      });
+
+      coursesEls.forEach((course) => {
+        const courseCategory = course
+          .getAttribute('data-category')
+          .toLowerCase();
+        if (hash === defaultTab || courseCategory === hash) {
+          course.style.display = 'flex';
+        } else {
+          course.style.display = 'none';
+        }
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.hash = tab.getAttribute('href') || defaultTab;
+        updateActiveTab();
+      });
+    });
+
+    window.addEventListener('hashchange', updateActiveTab);
+    updateActiveTab();
+  });
+</script>

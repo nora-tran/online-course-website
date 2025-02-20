@@ -1,0 +1,42 @@
+---
+import Container from "../common/Container.astro";
+import {categories} from "../../utils/course-category";
+
+const defaultTab = "#all"
+---
+
+<section id="select-category">
+  <Container>
+    <div
+      role="tablist"
+      class="tabs tabs-boxed mt-5 bg-slate-100 w-full flex flex-wrap gap-2"
+    >
+      <a role="tab" class="tab hover:bg-accent hover:text-black text-center no-underline px-4 py-2 h-12" href={defaultTab}>All Courses</a>
+      {categories.map(category => (<a role="tab" class="tab hover:bg-accent hover:text-primary  text-center no-underline px-4 py-2 h-12" href=`#${category.id}`>{category.title}</a>))}
+    </div>
+  </Container>
+</section>
+
+<script define:vars={{defaultTab}}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll("[role='tab']");
+
+    function updateActiveTab() {
+      const hash = window.location.hash || defaultTab;
+      tabs.forEach((tab) => {
+        tab.classList.toggle("tab-active", tab.getAttribute("href") === hash);
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.hash = tab.getAttribute("href") || defaultTab;
+        updateActiveTab();
+      });
+    });
+
+    window.addEventListener("hashchange", updateActiveTab);
+    updateActiveTab();
+  });
+</script>

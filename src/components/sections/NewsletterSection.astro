@@ -1,0 +1,39 @@
+---
+import bgNewsletter from '../../assets/images/bg_newsletter.jpg';
+import PhoneIcon from '../../assets/icon/phone.svg';
+import Logo from '../../assets/Logo.astro';
+import Input from '../common/TextField.astro';
+import Button from '../common/Button.astro';
+import Container from '../common/Container.astro';
+---
+
+<section
+  class="hero min-h-screen lg:min-h-[60vh]"
+  style=`background-image: url(${bgNewsletter.src});`
+>
+  <div class="hero-overlay bg-opacity-40"></div>
+  <div
+    class="hero-content h-full w-full bg-white text-center lg:my-10 lg:h-auto lg:w-auto lg:py-10"
+  >
+    <Container class="flex w-full flex-col items-center">
+      <h1 class="text-3xl font-bold">Let's build your future with us at</h1>
+      <Logo width={250} />
+      <p class="my-2 text-gray-600">
+        Subscribe now to get exclusive updates and offers.
+      </p>
+      <form class="flex w-full flex-col items-center justify-center gap-3">
+        <Input type="text" placeholder="Full Name" class="w-full" />
+        <Input type="text" placeholder="Email" class="w-full" />
+        <Input type="text" placeholder="Phone number" class="w-full" />
+        <div class="w-full">
+          <Button class="btn-primary w-full">Join our community</Button>
+          <div>or</div>
+          <Button class="btn-accent btn-lg w-full uppercase">
+            <PhoneIcon class="h-4 w-4" />
+            <div>CALL +61 2 1234 5678!</div>
+          </Button>
+        </div>
+      </form>
+    </Container>
+  </div>
+</section>

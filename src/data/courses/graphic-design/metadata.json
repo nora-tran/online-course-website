@@ -1,0 +1,32 @@
+{
+  "name": "Graphic Design",
+  "description": "Our graphic design courses help students develop creative and technical skills for a successful career in design. Covering topics like visual communication, typography, digital illustration, and UI/UX design, this course blends artistic principles with modern design technology.",
+  "category": "visual-graphic-designer",
+  "code": "#GRD2025",
+  "duration": "24 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate II",
+  "assessments": [
+    "Digital design portfolio including logo and branding projects",
+    "Online quizzes on design principles and software tools",
+    "User interface and user experience (UI/UX) project presentations"
+  ],
+  "overview": "<h4>Unleash Your Creativity in the World of Design</h4>\n<p>\nThis course provides students with industry-relevant skills in graphic design, covering everything from branding and typography to UI/UX design. Learn how to create compelling visuals and work with industry-standard software to bring your creative ideas to life.\n</p>",
+  "skills": [
+    "Adobe Photoshop, Illustrator, and InDesign proficiency",
+    "Typography and visual composition techniques",
+    "User interface (UI) and user experience (UX) design principles",
+    "Digital illustration and branding strategies"
+  ],
+  "careers": [
+    "Graphic Designer",
+    "UI/UX Designer",
+    "Branding Specialist",
+    "Illustrator"
+  ],
+  "purposes": [
+    "Upon successful completion, students will receive a Certificate II in Graphic Design.",
+    "Graduates will have a strong portfolio to showcase their skills to potential employers or clients.",
+    "Students can pursue further education in visual communication, multimedia design, or animation."
+  ]
+}

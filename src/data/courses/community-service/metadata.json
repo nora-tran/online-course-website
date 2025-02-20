@@ -1,0 +1,32 @@
+{
+  "name": "Community Services & Social Work",
+  "description": "Our community services course prepares students to support individuals and communities through social work, counseling, and advocacy. Covering mental health, social justice, and case management, this course is ideal for those passionate about making a difference in people’s lives.",
+  "category": "community-service",
+  "code": "#CSW2025",
+  "duration": "24 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate IV",
+  "assessments": [
+    "Case study reports and client care plans",
+    "Community engagement and social work practice assessments",
+    "Reflective journals on social justice and ethics"
+  ],
+  "overview": "<h4>Make a Difference in Your Community</h4>\n<p>\nThis course trains students in providing effective social support and community services. Learn about mental health care, crisis intervention, and advocacy to help improve the well-being of individuals and families in need.\n</p>",
+  "skills": [
+    "Counseling and mental health support",
+    "Case management and crisis intervention",
+    "Community development and social work practices",
+    "Ethical decision-making and advocacy"
+  ],
+  "careers": [
+    "Social Worker",
+    "Community Support Worker",
+    "Family Welfare Officer",
+    "Crisis Counselor"
+  ],
+  "purposes": [
+    "Upon completion, students receive a Certificate IV in Community Services.",
+    "Graduates can work in non-profits, government agencies, and support organizations.",
+    "Further studies can lead to a career in social work, counseling, or psychology."
+  ]
+}

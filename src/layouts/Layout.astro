@@ -1,0 +1,94 @@
+---
+import '@fontsource-variable/open-sans';
+import '@fontsource-variable/josefin-sans';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import ScrollToTop from './ScrollToTop.astro';
+interface Props {
+  title: string;
+}
+const { title = 'Sample' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="custom-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex h-screen flex-col">
+    <Header />
+    <main class="bg-cross-dots flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <ScrollToTop />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Open Sans Variable', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 p-0;
+    margin-bottom: 0.35em;
+    font-family: 'Josefin Sans Variable', sans-serif;
+  }
+
+  p {
+    margin-bottom: 0.35em;
+  }
+
+  h1 {
+    @apply text-8xl;
+  }
+
+  h2 {
+    @apply text-6xl;
+  }
+
+  h3 {
+    @apply text-5xl;
+  }
+
+  h4 {
+    @apply text-4xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-2xl;
+  }
+
+  .btn {
+    border-radius: 0;
+  }
+
+  .bg-cross-dots {
+    background-image:
+      radial-gradient(#bababa 1.5px, transparent 1.5px),
+      radial-gradient(#bababa 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    background-position:
+      0 0,
+      16px 16px;
+    background-color: #e8e8e8;
+  }
+</style>

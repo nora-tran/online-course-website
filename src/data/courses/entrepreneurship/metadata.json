@@ -1,0 +1,32 @@
+{
+  "name": "Entrepreneurship",
+  "description": "Our entrepreneurship courses equip students with the skills and knowledge needed to launch and grow a successful business. Covering business planning, financial management, leadership, and marketing strategies, this course helps aspiring entrepreneurs turn ideas into reality.",
+  "category": "business",
+  "code": "#ENTR2025",
+  "duration": "24 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate III",
+  "assessments": [
+    "Business plan development",
+    "Market research and competitive analysis reports",
+    "Financial projections and funding proposals"
+  ],
+  "overview": "<h4>Start and Scale Your Own Business</h4>\n<p>\nThis course provides students with the tools and insights needed to succeed in the world of entrepreneurship. Learn how to develop business strategies, secure funding, and manage operations effectively. Whether you dream of launching a startup or growing an existing business, this program will set you on the right path.\n</p>",
+  "skills": [
+    "Business planning and strategy development",
+    "Financial management and budgeting",
+    "Marketing and brand positioning",
+    "Leadership and decision-making"
+  ],
+  "careers": [
+    "Startup Founder",
+    "Business Consultant",
+    "Small Business Owner",
+    "Innovation Manager"
+  ],
+  "purposes": [
+    "Upon successful completion, students receive a Certificate III in Entrepreneurship.",
+    "Graduates will be equipped with the knowledge to start and run a business effectively.",
+    "Students can pursue further studies in business management, marketing, or finance."
+  ]
+}

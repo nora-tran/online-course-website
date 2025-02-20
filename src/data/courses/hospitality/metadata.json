@@ -1,0 +1,32 @@
+{
+  "name": "Hospitality & Tourism",
+  "description": "Our hospitality and tourism courses provide students with the knowledge and practical skills required to succeed in the global hospitality industry. Covering hotel management, event planning, and customer service, this course prepares students for dynamic careers in tourism and hospitality.",
+  "category": "education",
+  "code": "#HOSP2025",
+  "duration": "18 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate II",
+  "assessments": [
+    "Customer service role-play assessments",
+    "Event planning and hospitality management case studies",
+    "Online quizzes on industry best practices and tourism regulations"
+  ],
+  "overview": "<h4>Build a Rewarding Career in Hospitality & Tourism</h4>\n<p>\nThis course equips students with essential skills for the fast-paced world of hospitality. From hotel management to event planning, students will gain hands-on experience and industry knowledge to thrive in customer-centric roles within hospitality and tourism.\n</p>",
+  "skills": [
+    "Event planning and hospitality operations",
+    "Customer service and communication skills",
+    "Hotel and restaurant management fundamentals",
+    "Tourism marketing and travel planning"
+  ],
+  "careers": [
+    "Hotel Manager",
+    "Event Coordinator",
+    "Tourism Officer",
+    "Restaurant Supervisor"
+  ],
+  "purposes": [
+    "Upon successful completion, students will receive a Certificate II in Hospitality & Tourism.",
+    "Graduates will gain valuable industry experience and have opportunities for internships in top hotels and travel agencies.",
+    "Students can continue their studies in hotel management, tourism, or business hospitality programs."
+  ]
+}

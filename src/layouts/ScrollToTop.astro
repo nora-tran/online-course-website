@@ -1,0 +1,43 @@
+---
+import Button from '../components/common/Button.astro';
+import ArrowUp from '../assets/icon/arrow-up.svg';
+---
+
+<Button
+  id="scrollToTopBtn"
+  class="btn-primary fixed bottom-8 right-5 z-10 opacity-100 shadow-lg lg:bottom-10 lg:right-10"
+>
+  <ArrowUp class="h-4 w-4" />
+</Button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    if (!scrollToTopBtn) {
+      console.error('ScrollToTop button not found!');
+      return;
+    }
+
+    // Show or hide button based on scroll position
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('opacity-100');
+        scrollToTopBtn.classList.remove('opacity-0');
+      } else {
+        scrollToTopBtn.classList.add('opacity-0');
+        scrollToTopBtn.classList.remove('opacity-100');
+      }
+    });
+
+    // Ensure the click event is working
+    scrollToTopBtn.addEventListener('click', function () {
+      console.log('Scroll to top button clicked!'); // Debugging log
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  });
+</script>

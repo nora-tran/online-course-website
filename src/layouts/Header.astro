@@ -1,0 +1,24 @@
+---
+import NavDrawer from './NavDrawer.astro';
+import Container from '../components/common/Container.astro';
+import Logo from '../assets/Logo.astro';
+import Navigation from './Navigation.astro';
+import CallButton from '../components/common/CallButton.astro';
+---
+
+<div class="w-screen bg-white">
+  <header class="fixed top-0 z-20 h-16 w-full bg-white">
+    <Container class="flex h-full items-center justify-between py-2">
+      <Logo />
+      <div class="flex items-center gap-4">
+        <ul class="hidden items-center lg:flex">
+          <Navigation />
+        </ul>
+        <div class="flex items-center">
+          <CallButton />
+          <NavDrawer />
+        </div>
+      </div>
+    </Container>
+  </header>
+</div>

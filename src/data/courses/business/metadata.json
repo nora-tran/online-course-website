@@ -1,0 +1,33 @@
+{
+  "name": "Business",
+  "description": "Our business courses are designed to equip students with the essential skills and knowledge needed to thrive in the modern business world. Covering key areas such as management, marketing, finance, entrepreneurship, and business strategy, these courses provide both theoretical insights and practical applications. Whether you aspire to lead an organization or manage your own venture, these courses offer valuable guidance to turn your passion into a career.",
+  "category": "education",
+  "code": "#ACBDFGE",
+  "duration": "36 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate II",
+  "assessments": [
+    "Online quizzes, including multiple choice and short answer questions",
+    "Portfolio of evidence, written reports & case studies",
+    "Video and audio role plays and demonstrations"
+  ],
+  "overview": "<h4>Embark on a Journey to Business Success</h4>\n<p>Developing a career in business starts with a strong educational foundation. Our business courses offer practical skills and comprehensive theoretical knowledge across essential business areas. Students will engage in real-world case studies and simulations to apply their knowledge and problem-solving skills. Whether you aim to manage people, navigate complex business environments, or launch your own enterprise, this course prepares you to meet the challenges of the modern business world.</p>\n<p>Our curriculum is designed to cover essential business disciplines, ensuring that students gain a holistic understanding of the industry. From finance and marketing to management and entrepreneurship, we offer an extensive range of subjects that address key areas of business operations. This well-rounded approach ensures that students are not only well-versed in their chosen specialization but also capable of understanding how different business functions work together to drive an organization forward.</p>\n<p>One of the key aspects of our courses is the integration of real-world case studies and simulations. By analyzing real business scenarios, students can develop critical thinking and problem-solving skills that are crucial in today’s fast-paced environment. Our hands-on approach allows students to apply their theoretical knowledge to practical situations, helping them bridge the gap between classroom learning and real-life business challenges.</p>",
+  "skills": [
+    "Leadership & Management: Develop essential skills for managing teams and projects",
+    "Marketing Strategy: Learn how to effectively promote products and services",
+    "Financial Analysis: Understand how to manage budgets and interpret financial data",
+    "Entrepreneurship: Gain knowledge on launching and growing a successful business"
+  ],
+  "careers": [
+    "Business Manager",
+    "Marketing Coordinator",
+    "Financial Analyst",
+    "Entrepreneur"
+  ],
+  "purposes": [
+    "Upon successful completion of this course, you will receive a nationally recognized qualification, Certificate II in Business, awarded by an accredited institution.",
+    "This course will provide you with the foundational knowledge to pursue various career paths in business management, marketing, and entrepreneurship.",
+    "Students who excel in this program will have the opportunity to gain real-world business experience through internships and projects.",
+    "This course also provides a pathway to further education in advanced business degrees and certifications."
+  ]
+}

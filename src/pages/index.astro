@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import AboutHighlightsSection from '../components/sections/AboutHighlightsSection.astro';
+import CourseOverviewSection from '../components/sections/CourseOverviewSection.astro';
+import NewsletterSection from '../components/sections/NewsletterSection.astro';
+import { SCHOOL_NAME } from '../utils/navigation';
+---
+
+<Layout title={SCHOOL_NAME}>
+  <HeroSection />
+  <AboutHighlightsSection />
+  <CourseOverviewSection />
+  <NewsletterSection />
+</Layout>

@@ -1,0 +1,5 @@
+---
+const { class: customClass, id } = Astro.props;
+---
+
+<button {id} class=`btn ${customClass}`><slot /></button>

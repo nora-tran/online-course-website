@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import Container from '../common/Container.astro';
+import Logo from '../../assets/Logo.astro';
+import Button from '../common/Button.astro';
+import courseCategoryBusiness from '../../assets/images/course_category_business.jpg';
+import courseCategoryCommunity from '../../assets/images/course_category_community.jpg';
+import courseCategoryDesigner from '../../assets/images/course_category_designer.jpg';
+import courseCategoryEducation from '../../assets/images/course_category_education.jpg';
+import { PathName } from '../../utils/navigation';
+
+const categories = [
+  {
+    imgSrc: courseCategoryBusiness,
+    alt: 'Business professionals discussing data on a laptop screen in a meeting',
+    title: 'Business',
+  },
+  {
+    imgSrc: courseCategoryEducation,
+    alt: 'A teacher stands at the front of a classroom, delivering a lesson to a group of students.',
+    title: 'Education',
+  },
+  {
+    imgSrc: courseCategoryCommunity,
+    alt: 'Hands stacked together symbolizing teamwork and community',
+    title: 'Community Service',
+  },
+  {
+    imgSrc: courseCategoryDesigner,
+    alt: 'Graphic designer working at a modern desk setup with a curved monitor',
+    title: 'Visual & Graphic Design',
+  },
+];
+---
+
+<section
+  id="course-overview"
+  class="flex min-h-screen flex-col items-center justify-center py-20"
+>
+  <Container class=`items-center text-center text-black `>
+    <div class="flex items-center justify-center text-center">
+      <Logo width={300} />
+    </div>
+
+    <div
+      class="grid w-full gap-4 pb-8 pt-4 text-2xl font-bold lg:grid-cols-2 lg:px-14"
+    >
+      <p class="col-span-2 m-0 text-lg leading-relaxed text-primary">
+        LearnHub is dedicated to providing high-quality education accessible to
+        everyone. Our platform brings together expert educators and interactive
+        learning tools to help students succeed.
+      </p>
+      <div class="max-w-1/2 col-span-2 mx-auto w-full flex-1">
+        <a href={PathName.ALL_COURSES}>
+          <Button class="btn-primary btn-block">View all courses</Button></a
+        >
+      </div>
+      {
+        categories.map((category) => (
+          <div class="w-full overflow-hidden rounded-md bg-base-100 shadow-xl">
+            <Image
+              src={category.imgSrc}
+              alt={category.alt}
+              class="my-0 h-[200px] flex-1 object-cover"
+            />
+            <div class="py-4 text-center">{category.title}</div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/common/Container.astro';
+---
+
+<Layout title="404 Not Found">
+  <Container class="m-auto h-full pt-16">
+    <div class="flex h-full items-center justify-center">
+      <div class="rounded-2xl bg-white p-10 text-center shadow-2xl">
+        <h1 class="text-6xl font-bold text-error">404</h1>
+        <p class="mt-2 text-lg text-base-content">
+          Oops! The page you're looking for doesn't exist.
+        </p>
+        <a href="/" class="btn btn-primary mt-4">Go Home</a>
+      </div>
+    </div>
+  </Container>
+</Layout>

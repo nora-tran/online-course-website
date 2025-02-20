@@ -1,0 +1,26 @@
+{
+  "name": "online-course-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "create-course": "node scripts/createCourseFolder.js"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.4",
+    "@fontsource-variable/josefin-sans": "^5.1.1",
+    "@fontsource-variable/open-sans": "^5.1.1",
+    "astro": "^5.1.7",
+    "classnames": "^2.5.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.23",
+    "prettier": "^3.5.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  }
+}

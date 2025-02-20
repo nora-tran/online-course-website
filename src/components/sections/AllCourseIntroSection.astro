@@ -1,0 +1,25 @@
+---
+import Container from "../common/Container.astro";
+import picture01 from "../../assets/images/person_sit_type_laptop_table.jpg";
+---
+
+<section class="bg-primary pt-16">
+  <Container class="grid grid-cols-5 gap-4 py-10">
+    <div
+      class="col-span-5 lg:col-span-2 bg-accent min-h-[300px] lg:h-full w-full bg-cover bg-left-bottom"
+      style=`background-image: url(${picture01.src});`
+    >
+    </div>
+    <div class="flex flex-col col-span-5 lg:col-span-3 gap-5">
+      <div class="bg-accent text-primary font-bold text-5xl p-3">
+        Online Courses and Qualifications
+      </div>
+      <p class="text-gray-400 text-lg m-0 px-3">
+        Our school offers a diverse range of online courses designed to provide
+        students with flexible and high-quality learning experiences. Whether
+        you're looking to enhance your skills, explore new subjects, or advance
+        your career, our courses cater to various interests and academic levels.
+      </p>
+    </div>
+  </Container>
+</section>

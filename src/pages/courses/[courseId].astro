@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/common/Container.astro';
+import BreadCrumbs from '../../components/common/BreadCrumbs.astro';
+import CourseDetailBanner from '../../components/sections/CourseDetailBanner.astro';
+import CourseInfoTable from '../../components/sections/CourseInfoTable.astro';
+import { courses, getCourseById, placeholderCourse } from '../../utils/courses';
+import CourseItemImage from '../../components/sections/CourseItemImage.astro';
+import NewsletterSection from '../../components/sections/NewsletterSection.astro';
+import HorizontalLine from '../../components/common/HorizontalLine.astro';
+import { SCHOOL_NAME } from '../../utils/navigation';
+
+export function getStaticPaths() {
+  return courses.map((course) => ({
+    params: {
+      courseId: course.id,
+    },
+  }));
+}
+
+const { courseId = '' } = Astro.params;
+const course = getCourseById(courseId) ?? placeholderCourse;
+const { name = 'N/A', skills = [], careers = [], purposes = [] } = course;
+---
+
+<Layout title={SCHOOL_NAME}>
+  <div class="bg-white pb-10 pt-16">
+    <Container>
+      <BreadCrumbs />
+      <CourseDetailBanner course={course} />
+      <div class="my-5 h-1 w-full bg-secondary"></div>
+      <section class="flex flex-wrap gap-5">
+        <div class="flex w-full lg:w-[400px]">
+          <CourseInfoTable course={course} />
+        </div>
+        <div class="flex-1">
+          <div set:html={course.overview} />
+        </div>
+      </section>
+      <HorizontalLine />
+      <section id="skills" class="mx-10 flex flex-wrap justify-between gap-10">
+        <div class="flex flex-1 justify-center">
+          <figure class="m-0 max-w-[500px] flex-1 overflow-hidden bg-gray-200">
+            <CourseItemImage
+              imagePath={course.imageUrl}
+              altText={course?.name ?? 'No available'}
+            />
+          </figure>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <h4 class="text-center lg:text-left text-primary">Skills you'll learn</h4>
+          <ol>
+            {skills.map((skill) => <li>{skill}</li>)}
+          </ol>
+        </div>
+      </section>
+      <HorizontalLine />
+      <section
+        id="careers"
+        class="mx-10 flex flex-wrap justify-between gap-10 lg:flex-row-reverse"
+      >
+        <div class="flex flex-1 justify-center">
+          <figure class="m-0 max-w-[500px] flex-1 overflow-hidden bg-gray-200">
+            <CourseItemImage
+              imagePath={course.imageUrl}
+              altText={course?.name ?? 'No available'}
+            />
+          </figure>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <h4 class="text-center lg:text-left text-primary">Your career opportunities</h4>
+          <ol>
+            {careers.map((career) => <li>{career}</li>)}
+          </ol>
+        </div>
+      </section>
+      <section id="course-purpose">
+        <div class="bg-gradient mt-10 overflow-hidden rounded-lg p-4 shadow-lg">
+          <div class="bg-dot-gradient bg-primary p-10 text-white">
+            <h3 class="text-secondary">
+              Why study {name}?
+            </h3>
+            <ol>
+              {purposes.map((purpose) => <li>{purpose}</li>)}
+            </ol>
+          </div>
+        </div>
+      </section>
+    </Container>
+  </div>
+  <NewsletterSection />
+</Layout>
+
+<style>
+  .bg-gradient {
+    @apply bg-primary;
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    background-size: 100% 100%;
+  }
+
+  .bg-dot-gradient {
+    background-image:
+      linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
+      radial-gradient(circle, rgba(250, 240, 202, 0.2) 12%, transparent 12%);
+    background-size:
+      100% 100%,
+      20px 20px;
+  }
+
+  #skills,
+  #careers,
+  #course-purpose {
+    ol {
+      list-style-type: none; /* Remove default numbering */
+      padding-left: 0; /* Remove default padding */
+      counter-reset: steps;
+    }
+
+    ol li {
+      @apply my-8 text-lg;
+      position: relative; /* For absolute positioning of the circle */
+      counter-increment: steps;
+    }
+
+    ol li::before {
+      content: counter(steps); /* Add number */
+      counter-increment: list-item; /* Increment the number for each list item */
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      border-radius: 50%; /* Make it a circle */
+      font-weight: bold; /* Make the number bold */
+    }
+  }
+
+  #skills ol li,
+  #careers ol li {
+    @apply pl-10;
+  }
+
+  #skills ol li::before,
+  #careers ol li::before {
+    @apply h-8 w-8 bg-accent leading-7 text-black;
+  }
+
+  #course-purpose ol li {
+    @apply pl-12;
+  }
+
+  #course-purpose ol li::before {
+    @apply h-10 w-10 bg-secondary text-2xl leading-9 text-primary;
+  }
+</style>

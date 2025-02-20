@@ -1,0 +1,32 @@
+{
+  "name": "Health & Fitness",
+  "description": "Our health and fitness courses are designed to equip students with the knowledge and skills needed to promote well-being, physical fitness, and a healthy lifestyle. Covering personal training, nutrition, sports science, and wellness coaching, this course prepares students for careers in the health and fitness industry.",
+  "category": "education",
+  "code": "#HLTH2025",
+  "duration": "12 months",
+  "eligibility": "18+ individual",
+  "qualification": "Certificate III",
+  "assessments": [
+    "Fitness assessment and exercise programming assignments",
+    "Nutritional planning and wellness coaching projects",
+    "Online quizzes covering anatomy, physiology, and exercise science"
+  ],
+  "overview": "<h4>Empower Yourself and Others Through Fitness</h4>\n<p>\nThis course is perfect for individuals passionate about fitness and well-being. Students will learn how to develop effective workout plans, understand human anatomy, and provide guidance on nutrition. Whether you aim to become a personal trainer or work in sports rehabilitation, this course lays the foundation for a fulfilling health and fitness career.\n</p>",
+  "skills": [
+    "Personal training and strength conditioning",
+    "Nutritional planning and diet management",
+    "Sports science and injury prevention",
+    "Wellness coaching and mental health support"
+  ],
+  "careers": [
+    "Personal Trainer",
+    "Health Coach",
+    "Sports Therapist",
+    "Fitness Instructor"
+  ],
+  "purposes": [
+    "Upon successful completion, students will receive a Certificate III in Health & Fitness.",
+    "Graduates will be prepared for careers in personal training, sports rehabilitation, and wellness coaching.",
+    "Students can pursue additional certifications in strength training, yoga instruction, or sports nutrition."
+  ]
+}
