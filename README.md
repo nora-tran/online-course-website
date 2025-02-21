@@ -35,4 +35,6 @@ Locate to folder `scr/data/<course_name>` to update file metadata manually.
 
 ## Preview
 
+[https://online-course-website.pages.dev/](https://online-course-website.pages.dev/)
+
 ![Preview](img.png)
