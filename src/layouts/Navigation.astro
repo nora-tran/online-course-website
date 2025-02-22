@@ -3,7 +3,7 @@ interface Props {
   isMobile?: boolean;
 }
 
-import { Routes } from "../utils/navigation";
+import { Routes } from '../utils/navigation';
 
 const { isMobile = false } = Astro.props;
 ---
@@ -15,7 +15,7 @@ const { isMobile = false } = Astro.props;
   }
 
   .hover-underline-animation::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -36,8 +36,7 @@ const { isMobile = false } = Astro.props;
 
   :not(
       .navigation__item--active
-    ).hover-underline-animation.center:hover::after
-   {
+    ).hover-underline-animation.center:hover::after {
     transform-origin: bottom center;
   }
 
@@ -47,8 +46,8 @@ const { isMobile = false } = Astro.props;
   }
 
   .navigation__item--active.navigation__item--mobile {
-      @apply bg-slate-200;
-      @apply font-bold;
+    @apply bg-slate-200;
+    @apply font-bold;
   }
 </style>
 
@@ -56,7 +55,7 @@ const { isMobile = false } = Astro.props;
   Routes.map((route) => (
     <a
       href={route.path}
-      class=`navigation__item hover-underline-animation center py-2 px-4 ${isMobile && "navigation__item--mobile"}`
+      class={`navigation__item hover-underline-animation center px-4 py-2 ${isMobile && 'navigation__item--mobile'}`}
     >
       {route.title}
     </a>
@@ -64,15 +63,15 @@ const { isMobile = false } = Astro.props;
 }
 
 <script>
-  const navLinks = document.querySelectorAll("a.navigation__item");
+  const navLinks = document.querySelectorAll('a.navigation__item');
   navLinks.forEach((link) => {
-    link.classList.remove("navigation__item--active");
+    link.classList.remove('navigation__item--active');
     const currentPath = window.location.pathname.slice(1);
-    const hrefArray = link.getAttribute("href")?.split("/") ?? "";
+    const hrefArray = link.getAttribute('href')?.split('/') ?? '';
     const thisPath = hrefArray[hrefArray.length - 1];
 
     if (currentPath === thisPath) {
-      link.classList.add("navigation__item--active");
+      link.classList.add('navigation__item--active');
     }
   });
 </script>

@@ -1,42 +1,56 @@
 ---
-import Container from "../common/Container.astro";
-import {categories} from "../../utils/course-category";
+import Container from '../common/Container.astro';
+import { categories } from '../../utils/course-category';
 
-const defaultTab = "#all"
+const defaultTab = '#all';
 ---
 
 <section id="select-category">
   <Container>
     <div
       role="tablist"
-      class="tabs tabs-boxed mt-5 bg-slate-100 w-full flex flex-wrap gap-2"
+      class="tabs-boxed tabs mt-5 flex w-full flex-wrap gap-2 bg-slate-100"
     >
-      <a role="tab" class="tab hover:bg-accent hover:text-black text-center no-underline px-4 py-2 h-12" href={defaultTab}>All Courses</a>
-      {categories.map(category => (<a role="tab" class="tab hover:bg-accent hover:text-primary  text-center no-underline px-4 py-2 h-12" href=`#${category.id}`>{category.title}</a>))}
+      <a
+        role="tab"
+        class="tab h-12 px-4 py-2 text-center no-underline hover:bg-accent hover:text-black"
+        href={defaultTab}>All Courses</a
+      >
+      {
+        categories.map((category) => (
+          <a
+            role="tab"
+            class="tab h-12 px-4 py-2 text-center no-underline hover:bg-accent hover:text-primary"
+            href={`#${category.id}`}
+          >
+            {category.title}
+          </a>
+        ))
+      }
     </div>
   </Container>
 </section>
 
-<script define:vars={{defaultTab}}>
-  document.addEventListener("DOMContentLoaded", () => {
+<script define:vars={{ defaultTab }}>
+  document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll("[role='tab']");
 
     function updateActiveTab() {
       const hash = window.location.hash || defaultTab;
       tabs.forEach((tab) => {
-        tab.classList.toggle("tab-active", tab.getAttribute("href") === hash);
+        tab.classList.toggle('tab-active', tab.getAttribute('href') === hash);
       });
     }
 
     tabs.forEach((tab) => {
-      tab.addEventListener("click", (event) => {
+      tab.addEventListener('click', (event) => {
         event.preventDefault();
-        window.location.hash = tab.getAttribute("href") || defaultTab;
+        window.location.hash = tab.getAttribute('href') || defaultTab;
         updateActiveTab();
       });
     });
 
-    window.addEventListener("hashchange", updateActiveTab);
+    window.addEventListener('hashchange', updateActiveTab);
     updateActiveTab();
   });
 </script>

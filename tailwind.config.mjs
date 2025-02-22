@@ -22,6 +22,7 @@ export default {
           success: '#36d399',
           warning: '#fbbd23',
           error: '#f87272',
+          test: "#f4d35e"
         },
       },
       'light', // Keep default light theme
